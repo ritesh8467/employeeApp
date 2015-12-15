@@ -36,9 +36,9 @@ gulp.task('copyvendor', function () {
 		.pipe(gulp.dest('public/'));
 });
 
-gulp.task('watch', function () {
-	gulp.watch(["assets/react/**/*.js"], ["js", "browserify:js"]);
-	gulp.watch('assets/stylesheets/**/*.scss', ['sass']);
-});
+// gulp.task('watch', function () {
+// 	gulp.watch(["assets/react/**/*.js"], ["js", "browserify:js"]);
+// 	gulp.watch('assets/stylesheets/**/*.scss', ['sass']);
+// });
 
-gulp.task('default', ['js', 'sass', 'browserify:js', "copyvendor", 'watch']);
+gulp.task('default', ['js', 'sass', 'browserify:js', "copyvendor"]);

@@ -5,7 +5,7 @@ Steps to Execute code:
 `gulp`
 `node server`
 
-Server will run on http://localhost:3000
+Open http://localhost:3000 on your browser
 
 Tech Used:
 Frontend => Redux
