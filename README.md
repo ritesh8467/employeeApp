@@ -11,8 +11,11 @@ Steps to Execute code:
 Open http://localhost:3000 on your browser
 
 Tech Used:
+
 Frontend => Redux
+
 File Server => Nodejs
+
 File Compiler => Gulp
 
 Add dummy data to server/dummy_data.js file.
