@@ -1,8 +1,11 @@
 Steps to Execute code:
 
 `npm install`
+
 `npm install -g gulp`
+
 `gulp`
+
 `node server`
 
 Open http://localhost:3000 on your browser
