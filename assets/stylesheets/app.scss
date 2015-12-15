@@ -1,0 +1,151 @@
+@import './basic';
+@import './reset';
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+$blue: #02B4E0;
+
+#application{
+    position: fixed;
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px #A5A4A4;
+    left: 50%;
+    margin-left: -200px;
+    top: 50%;
+    height: 300px;
+    margin-top: -200px;
+    overflow-x: hidden
+}
+.main-elem{
+	padding: 20px;
+	transition: all 0.4s;
+	transform: translateX(100%);
+	&.success{transform: translateX(-100%);}
+	&.show-form{transform: translateX(0%);}
+	.start, .retry{
+		position: absolute;
+		bottom: 0px;
+		right: 20px;
+	}
+	> div{transition: all 0.3s;}
+}
+.form-elem{
+	transform: translateX(0);
+}
+.pre-elem, .success-elem{
+	position: absolute;
+	padding: 130px 20px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 18px;
+	top: 0;
+}
+.pre-elem .message{font-size: 20px;}
+.success-elem{right: -100%;}
+.pre-elem{left: -100%;}
+.close{
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	font-size: 20px;
+	right: 15px;
+	color: $blue;
+}
+.header{
+	font-size: 24px;
+	margin-bottom: 20px;
+	color: $blue;
+}
+.email-alert{
+	input{margin-right: 10px;}
+	margin-bottom: 20px;
+}
+.typeahead-item{
+	.label{
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+}
+.search-typeahead{
+	position: relative;
+	margin-bottom: 20px;
+	&:before{
+		content: '\e80d';
+		font-family: "fontello";
+		float: right;
+		position: absolute;
+		right: 10px;
+		line-height: 30px;
+		color: grey;
+	}
+	&.filled:before{
+		content: '\e810';
+	}
+	.topcoat-list-container{
+		position: absolute;
+		width: 100%;
+		line-height: 28px;
+		top: 36px;
+		box-shadow: 0px 2px 5px grey;
+		border: 1px solid rgba(0,0,0,0.1);
+	}
+	.topcoat-text-input {
+		width: 100%;
+		line-height: 36px;
+		outline: 0;
+		background-color: #E8E8E8;
+		border: 0;
+		padding: 0 40px 0 10px;
+		font-size: 14px;
+		box-sizing: border-box;
+	}
+	.topcoat-list-item{
+		cursor: pointer;
+		padding: 0 10px;
+		background-color: white;
+		&:hover{
+			background-color: $blue;
+			.typeahead-option{
+				color: white;
+			}
+		}
+	}
+	.typeahead-option{
+		color: $blue;
+	}
+	.topcoat-active {
+		background-color: $blue;
+		.typeahead-option{
+			color: white;
+		}
+	}
+	.topcoat-addme::before {
+	  content: 'Add me: '
+	}
+	.topcoat-addme {
+	  text-align: right;
+	}
+	&.error .topcoat-text-input{border: 1px solid red;}
+}
+.dummy{
+	.topcoat-text-input{
+		color: rgba(0,0,0,0.4);
+	}
+}
+.form-button{
+	float: right;
+	margin-left: 10px;
+	border-radius: 2px;
+	cursor: pointer;
+	line-height: 30px;
+	padding: 0 20px;
+	transition: all 0.3s;
+	&.ok, &.retry, &.start{background-color: $blue; color: white;}
+	&.cancel{background-color: #E8E8E8}
+	&:hover{
+		box-shadow: 1px 1px 5px #A5A4A4;
+	}
+}
